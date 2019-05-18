@@ -94,12 +94,12 @@ class AlbumResource extends Resource
                 ->rules('required'),
 
             Text::make(__('Images Count'), function () {
-                return (string) $this->totalPhotos();
+                return (string)$this->totalPhotos();
             })->hideFromDetail()
                 ->hideWhenCreating()
                 ->hideWhenUpdating(),
 
-            Trix::make(__('Description'), 'description'),
+            // Trix::make(__('Description'), 'description'),
 
             GalleryResourceTool::make(),
         ];

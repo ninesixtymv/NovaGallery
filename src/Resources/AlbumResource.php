@@ -10,6 +10,7 @@ use EricLagarda\NovaGallery\Models\Album;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 

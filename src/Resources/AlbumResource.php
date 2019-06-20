@@ -99,6 +99,8 @@ class AlbumResource extends Resource
                 ->hideWhenCreating()
                 ->hideWhenUpdating(),
 
+            Boolean::make('Is Campaign', 'is_campaign'),
+
             // Trix::make(__('Description'), 'description'),
 
             GalleryResourceTool::make(),

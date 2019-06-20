@@ -13,6 +13,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use EricLagarda\NovaGallery\Filters\IsCampaign;
 
 class AlbumResource extends Resource
 {
@@ -100,7 +101,7 @@ class AlbumResource extends Resource
                 ->hideWhenCreating()
                 ->hideWhenUpdating(),
 
-            Boolean::make('Is Campaign', 'is_campaign'),
+            Boolean::make('Is Campaign', 'is_campaign')->hideFromIndex(),
 
             // Trix::make(__('Description'), 'description'),
 
@@ -127,7 +128,7 @@ class AlbumResource extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [new IsCampaign];
     }
 
     /**
